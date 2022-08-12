@@ -61,7 +61,6 @@ VERILATOR_INPUT = $(FILES) $(TOPMODULE).sv --top-module $(TOPMODULE)
 help:
 	@echo -e "make [option]"
 	@echo -e "\tlint    run lint checks for syntax and violations"
-	@echo -e "\tsview   view schematics"
 	@echo -e "\tbuild   verilate and build modules"
 	@echo -e "\tsim     run simulation"
 	@echo -e "\tcov     check coverage"
@@ -71,14 +70,6 @@ help:
 
 .PHONY: all
 all: lint sim
-
-.PHONY: sview
-sview: $(TOPMODULE).svg
-	$(BROWSER) $(TOPMODULE).svg
-
-$(TOPMODULE).svg: $(TOPMODULE).ys
-	yosys $(TOPMODULE).ys
-	netlistsvg -o $(TOPMODULE).svg $(TOPMODULE).json
 
 .PHONY: lint
 lint:
