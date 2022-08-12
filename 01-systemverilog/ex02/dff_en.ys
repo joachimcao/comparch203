@@ -1,0 +1,9 @@
+# read design
+read_verilog -sv dff_en.sv
+hierarchy -check -top dff_en
+
+# high-level synthesis
+proc; opt; fsm; opt; memory; opt
+
+# export to json file
+write_json dff_en.json

@@ -1,0 +1,12 @@
+# read design
+read_verilog -sv -formal include/my_pkg.svh
+read_verilog -sv -formal src/button_buffer.sv
+read_verilog -sv -formal src/counter.sv
+read_verilog -sv -formal src/master.sv
+read_verilog -sv -formal top.sv
+hierarchy -check -top top
+
+# high-level synthesis
+proc; opt; fsm; opt; memory; opt
+
+write_json top.json

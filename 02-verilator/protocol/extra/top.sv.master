@@ -1,0 +1,22 @@
+`default_nettype none
+
+module top (
+  // Input
+  input logic clk_i,
+  input logic busy_i,
+  input logic button_i,
+  // Output
+  output logic req_o,
+  output logic [3:0] counter_o,
+);
+
+  master c0 (
+    .clk_i    (clk_i),
+    .counter_i(counter_i),
+    .busy_i   (busy_i),
+    .button_i (button_i),
+    .req_o    (req_o),
+    .counter_o(counter_o),
+  );
+
+endmodule : top

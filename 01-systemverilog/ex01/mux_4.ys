@@ -1,0 +1,10 @@
+# read design
+read_verilog -sv mux_2.sv
+read_verilog -sv mux_4.sv
+hierarchy -check -top mux_4
+
+# high-level synthesis
+proc; opt; fsm; opt; memory; opt
+
+# export to json file
+write_json mux_4.json
