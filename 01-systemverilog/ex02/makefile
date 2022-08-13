@@ -1,4 +1,4 @@
-BROWSER=brave-browser-beta
+BROWSER=brave
 
 .PHONY: lintd
 lintd:

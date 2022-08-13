@@ -16,7 +16,7 @@ FILES := include/my_pkg.svh \
 
 VERILATOR = verilator
 VERILATOR_COV = verilator_coverage
-BROWSER = brave-beta
+BROWSER = brave
 
 ### LINT FLAGS
 LINT_FLAGS = -Wall --lint-only -sv

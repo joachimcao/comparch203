@@ -29,7 +29,7 @@ all: lint sim
 
 .PHONY: sview
 sview: $(TOPMODULE).svg
-	brave-browser-beta $(TOPMODULE).svg
+	brave $(TOPMODULE).svg
 
 $(TOPMODULE).svg: $(TOPMODULE).ys
 	yosys $(TOPMODULE).ys
